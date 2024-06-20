@@ -1,0 +1,9 @@
+CHIP AnotherHalfAdder{
+     IN a, b;
+     OUT sum, carry;
+
+     PARTS:
+     Xor (a = a, b = b, out = out1);
+     Not (in = out1, out = sum);
+     Or (a = a, b = b, out = carry);
+}
